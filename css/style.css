@@ -1,3 +1,7 @@
+* {
+  transition: all 1s ease 0s;
+  -webkit-animation: all 1 ease 0s;
+}
 body {
   text-align: center;
   overflow-y: scroll;
@@ -43,9 +47,15 @@ body.progrecss:after {
   width: 100%;
   max-width: 80px;
 }
+.steps {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
 select,
 input {
   text-align: center;
+  height: 30px;
+  font-size: 0.85em;
 }
 .lead {
   margin: 20px 0px 10px 0px;
