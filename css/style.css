@@ -1,0 +1,48 @@
+body {
+  text-align: center;
+  overflow-y: scroll;
+  font-weight: 300;
+}
+@keyframes progrecss {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes progrecss {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+body.progrecss:after {
+  animation: progrecss 5s;
+  -webkit-animation: progrecss 5s;
+}
+.row.progrecss:after {
+  animation: progrecss 60s infinite;
+  -webkit-animation: progrecss 60s infinite;
+}
+.highlight {
+  width: 370px;
+  text-align: left;
+  margin: 0 auto;
+}
+.text {
+  margin: 0 0 0 40px;
+}
+.percent {
+  width: 100%;
+  max-width: 80px;
+}
+select,
+input {
+  text-align: center;
+}
+.lead {
+  margin: 20px 0px 10px 0px;
+}
