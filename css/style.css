@@ -3,6 +3,10 @@ body {
   overflow-y: scroll;
   font-weight: 300;
 }
+h1,
+.highlight {
+  max-width: 100%;
+}
 @keyframes progrecss {
   0% {
     width: 0%;
