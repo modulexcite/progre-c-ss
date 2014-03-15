@@ -1904,21 +1904,33 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   animation: timer 120s;
   -webkit-animation: timer 120s;
 }
-.progrecss[data-progrecss].green:after {
+.progrecss[data-progrecss].green:after,
+.progrecss[data-progrecss-mock].green:after,
+.progrecss[data-progrecss-timer].green:after {
   background-color: #2ecc71;
 }
-.progrecss[data-progrecss].blue:after {
+.progrecss[data-progrecss].blue:after,
+.progrecss[data-progrecss-mock].blue:after,
+.progrecss[data-progrecss-timer].blue:after {
   background-color: #3498db;
 }
-.progrecss[data-progrecss].purple:after {
+.progrecss[data-progrecss].purple:after,
+.progrecss[data-progrecss-mock].purple:after,
+.progrecss[data-progrecss-timer].purple:after {
   background-color: #9b59b6;
 }
-.progrecss[data-progrecss].yellow:after {
+.progrecss[data-progrecss].yellow:after,
+.progrecss[data-progrecss-mock].yellow:after,
+.progrecss[data-progrecss-timer].yellow:after {
   background-color: #f1c40f;
 }
-.progrecss[data-progrecss].orange:after {
+.progrecss[data-progrecss].orange:after,
+.progrecss[data-progrecss-mock].orange:after,
+.progrecss[data-progrecss-timer].orange:after {
   background-color: #e67e22;
 }
-.progrecss[data-progrecss].red:after {
+.progrecss[data-progrecss].red:after,
+.progrecss[data-progrecss-mock].red:after,
+.progrecss[data-progrecss-timer].red:after {
   background-color: #e74c3c;
 }
