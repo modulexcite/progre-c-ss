@@ -2,7 +2,7 @@
 var setDemo = function (name, element) {
 	$('.demo-container').remove();
 	$('.show').removeClass('show');
-	$('div[name="' + name + '"').addClass('show');
+	$('.code-snippet[name="' + name + '"]').addClass('show');
 	$('body').prepend(element);
 };
 $('.action').on('click', function (event) {
@@ -17,6 +17,9 @@ $('.action').on('click', function (event) {
 		break;
 	case "staggered-mock":
 		setDemo('staggered-mock', '<div class = "demo-container progrecss fixed mock staggered green" data-progrecss-mock = "5"></div>');
+		break;
+	case "timer":
+		setDemo('timer', '<div class = "demo-container progrecss fixed timer purple" data-progrecss-timer = "10"></div>');
 		break;
 	}
 });

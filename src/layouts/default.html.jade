@@ -19,6 +19,7 @@ head
 	!= getBlock('meta').add(site.meta).toHTML()
 	!= getBlock("styles").add(site.styles).toHTML()
 	script(src="js/vendor/modernizr-2.6.2.min.js")
+	script(src="http://yandex.st/highlightjs/8.0/highlight.min.js")
 body.progrecss.green.fixed.mock.staggered(data-progrecss-mock = "5")
 	//if lt IE 7
 		p.browsehappy
@@ -30,6 +31,8 @@ body.progrecss.green.fixed.mock.staggered(data-progrecss-mock = "5")
 				|upgrade your browser
 			|to improve your experience.
 	!= content
+	script.
+		hljs.initHighlightingOnLoad();
 	script.
 		window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
 	!= getBlock('scripts').add(site.scripts, {defer:false}).toHTML()

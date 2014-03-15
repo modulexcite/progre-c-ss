@@ -21,82 +21,26 @@ header.container
 						Add a data attribute <code>data-progrecss</code> defining the completion percentage (1 to 100) and any optional data attributes and classes for your desired behaviour/position/appearance*
 					li.
 						update progre(c)ss value if necessary using simple vanilla js or whatever suits you best!
-				.code-snippet
-					.highlight.hide.show
+				.code-snippet.hide.show
 						pre
-							span.nt.
-								&lt;div
-							span.na
-								| class=
-							span.s.
-								&quot;progrecss&quot;
-							span.na.
-								data-progrecss=
-							span.s.
-								&quot;77&quot;
-							span.nt.
-								&gt;
-							span.text.
-								your content!
-							span.nt.
-								&lt;/div&gt;
-				.code-snippet
-					.highlight.hide(name = "basic")
+							code.
+								&lt;div  class=&quot;progrecss&quot; data-progrecss=&quot;77&quot;&gt;your content!&lt;/div&gt;
+				.code-snippet.hide(name = "basic")
 						pre
-							span.nt.
-								&lt;div
-							span.na
-								| class=
-							span.s.
-								&quot;progrecss fixed blue&quot;
-							span.na.
-								data-progrecss=
-							span.s.
-								&quot;75&quot;
-							span.nt.
-								&gt;
-							span.text.
-								fixed blue progre(c)ss
-							span.nt.
-								&lt;/div&gt;
-				.code-snippet
-					.highlight.hide(name = "mock")
+							code.
+								&lt;div class=&quot;progrecss fixed blue&quot; data-progrecss=&quot;75&quot;&gt;fixed blue progre(c)ss&lt;/div&gt;
+				.code-snippet.hide(name = "mock")
 						pre
-							span.nt.
-								&lt;div
-							span.na
-								| class=
-							span.s.
-								&quot;progrecss mock fixed red&quot;
-							span.na.
-								data-progrecss-mock=
-							span.s.
-								&quot;5&quot;
-							span.nt.
-								&gt;
-							span.text.
-								fixed red mocked progre(c)ss
-							span.nt.
-								&lt;/div&gt;
-				.code-snippet
-					.highlight.hide(name = "staggered-mock")
+							code.
+								&lt;div class=&quot;progrecss mock fixed red&quot; data-progrecss-mock=&quot;5&quot;&gt;fixed red mocked progre(c)ss&lt;/div&gt;
+				.code-snippet.hide(name = "staggered-mock")
 						pre
-							span.nt.
-								&lt;div
-							span.na
-								| class=
-							span.s.
-								&quot;progrecss mock fixed staggered green&quot;
-							span.na.
-								data-progrecss-mock=
-							span.s.
-								&quot;5&quot;
-							span.nt.
-								&gt;
-							span.text.
-								fixed staggered mock progre(c)ss
-							span.nt.
-								&lt;/div&gt;
+							code.
+								&lt;div class=&quot;progrecss mock fixed staggered green&quot; data-progrecss-mock=&quot;5&quot;&gt;fixed staggered mock progre(c)ss&lt;/div&gt;
+				.code-snippet.hide(name = "timer")
+						pre
+							code.
+								&lt;div class=&quot;progrecss timer fixed purple&quot; data-progrecss-timer=&quot;10&quot;&gt;timer progre(c)ss&lt;/div&gt;
 				.options
 					button.btn.btn-info.action(name = "basic").
 						basic
@@ -104,6 +48,8 @@ header.container
 						mock
 					button.btn.btn-info.action(name = "staggered-mock").
 						staggered mock
+					button.btn.btn-info.action(name = "timer").
+						timer
 				p.lead.
 					That's it!
 				p.

@@ -31,8 +31,6 @@ docpadConfig = {
 			styles: [
 				'//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css'
 				'//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'
-				'css/vendor/normalize.css'
-            				'css/vendor/main.css'
             				'css/flat-ui.css'
             				'css/syntax.css'
             				'css/progrecss.css'
