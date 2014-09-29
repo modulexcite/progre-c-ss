@@ -1,0 +1,64 @@
+extends layout-blocks/layout
+block content
+  .container
+    .row
+      .col-md-10.col-md-offset-1.text-center
+        select.text-center
+          option(value = "whirl").
+            standard
+          option(value = "whirl traditional").
+            traditional
+          option(value = "whirl double-up").
+            double-up
+          option(value = "whirl duo").
+            duo
+          option(value = "whirl sphere").
+            sphere
+          option(value = "whirl sphere vertical").
+            sphere-vertical
+          option(value = "whirl bar").
+            bar
+          option(value = "whirl bar follow").
+            bar follow
+          option(value = "whirl line").
+            line
+          option(value = "whirl line grow").
+            line grow
+          option(value = "whirl line back-and-forth").
+            line back and forth
+          option(value = "whirl line back-and-forth grow").
+            line back and forth grow
+          option(value = "whirl shadow").
+            shadow
+          option(value = "whirl shadow oval").
+            shadow oval left
+          option(value = "whirl shadow oval right").
+            shadow oval right
+          option(value = "whirl blade").
+            blade
+          option(value = "whirl ringed").
+            ringed
+          option(value = "whirl helicopter").
+            helicopter
+          option(value = "whirl no-overlay").
+            no overlay
+    .row
+      .col-md-6.col-md-offset-3
+        .whirl(id = "demo").
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis tortor vitae urna varius, vitae adipiscing turpis pulvinar. Mauris ornare nibh vel tristique elementum. Ut porta rutrum consectetur.
+    .row
+      .col-md-10.col-md-offset-1.text-center
+        h5.
+          classes required:
+        code.text-center.
+          whirl
+    .row
+      .col-md-10.col-md-offset-1.text-center
+        ul.text-center
+          li Include the <a href="https://github.com/jh3y/-cs-spinner">stylesheet</a> (<a href="https://github.com/jh3y/-cs-spinner/blob/master/README.md" target="_blank">tweaking</a> where necessary, see the docs).
+          li Add and remove appropriate classes to your elements when necessary  (using js).
+  script.
+    $('select').on('change', function (event) {
+      $('#demo')[0].className = $('select').val();
+      $('code').text($('select').val());
+    })
