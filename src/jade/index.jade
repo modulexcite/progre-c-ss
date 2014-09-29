@@ -2,63 +2,67 @@ extends layout-blocks/layout
 block content
   .container
     .row
-      .col-md-10.col-md-offset-1.text-center
-        select.text-center
-          option(value = "whirl").
-            standard
-          option(value = "whirl traditional").
-            traditional
-          option(value = "whirl double-up").
-            double-up
-          option(value = "whirl duo").
-            duo
-          option(value = "whirl sphere").
-            sphere
-          option(value = "whirl sphere vertical").
-            sphere-vertical
-          option(value = "whirl bar").
-            bar
-          option(value = "whirl bar follow").
-            bar follow
-          option(value = "whirl line").
-            line
-          option(value = "whirl line grow").
-            line grow
-          option(value = "whirl line back-and-forth").
-            line back and forth
-          option(value = "whirl line back-and-forth grow").
-            line back and forth grow
-          option(value = "whirl shadow").
-            shadow
-          option(value = "whirl shadow oval").
-            shadow oval left
-          option(value = "whirl shadow oval right").
-            shadow oval right
-          option(value = "whirl blade").
-            blade
-          option(value = "whirl ringed").
-            ringed
-          option(value = "whirl helicopter").
-            helicopter
-          option(value = "whirl no-overlay").
-            no overlay
-    .row
-      .col-md-6.col-md-offset-3
-        .whirl(id = "demo").
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis tortor vitae urna varius, vitae adipiscing turpis pulvinar. Mauris ornare nibh vel tristique elementum. Ut porta rutrum consectetur.
-    .row
-      .col-md-10.col-md-offset-1.text-center
-        h5.
-          classes required:
-        code.text-center.
-          whirl
-    .row
-      .col-md-10.col-md-offset-1.text-center
-        ul.text-center
-          li Include the <a href="https://github.com/jh3y/-cs-spinner">stylesheet</a> (<a href="https://github.com/jh3y/-cs-spinner/blob/master/README.md" target="_blank">tweaking</a> where necessary, see the docs).
-          li Add and remove appropriate classes to your elements when necessary  (using js).
+      .col-md-8.col-md-offset-2
+        ul.steps
+          li.
+            include the <a href="https://github.com/jh3y/progre-c-ss">stylesheet</a>
+          li.
+            add the class <code>progression</code> to your element (any existing element)
+          li.
+            Add a data attribute <code>data-progression</code> defining the completion percentage (1 to 100) and any optional data attributes and classes for your desired behaviour/position/appearance*
+          li.
+            update progre(c)ss value if necessary using simple vanilla js or whatever suits you best!
+        .code-snippet.hide.show
+            pre
+              code.
+                &lt;div  class=&quot;progression&quot; data-progression=&quot;77&quot;&gt;your content!&lt;/div&gt;
+        .code-snippet.hide(name = "basic")
+            pre
+              code.
+                &lt;div class=&quot;progression fixed blue&quot; data-progression=&quot;75&quot;&gt;fixed blue progre(c)ss&lt;/div&gt;
+        .code-snippet.hide(name = "mock")
+            pre
+              code.
+                &lt;div class=&quot;progression mock fixed red&quot; data-progression-mock=&quot;5&quot;&gt;fixed red mocked progre(c)ss&lt;/div&gt;
+        .code-snippet.hide(name = "staggered-mock")
+            pre
+              code.
+                &lt;div class=&quot;progression mock fixed staggered green&quot; data-progression-mock=&quot;5&quot;&gt;fixed staggered mock progre(c)ss&lt;/div&gt;
+        .code-snippet.hide(name = "timer")
+            pre
+              code.
+                &lt;div class=&quot;progression timer fixed purple&quot; data-progression-timer=&quot;10&quot;&gt;timer progre(c)ss&lt;/div&gt;
+        .options
+          button.btn.btn-info.action(name = "basic").
+            basic
+          button.btn.btn-info.action(name = "mock").
+            mock
+          button.btn.btn-info.action(name = "staggered-mock").
+            staggered mock
+          button.btn.btn-info.action(name = "timer").
+            timer
   script.
-    $('select').on('change', function (event) {
-      $('#demo')[0].className = $('select').val();
-      $('code').text($('select').val());
-    })
+    var setDemo = function (name, element) {
+      $('.demo-container').remove();
+      $('.show').removeClass('show');
+      $('.code-snippet[name="' + name + '"]').addClass('show');
+      $('body').prepend(element);
+    };
+    $('.action').on('click', function (event) {
+      var action = $(this).attr('name');
+      switch(action) {
+        case "basic":
+          setDemo('basic', '<div class = "demo-container progression fixed blue" data-progression = "0"></div>')
+          setTimeout(function () {$('.demo-container').attr('data-progression', '75');}, 1000);
+          break;
+        case "mock":
+          setDemo('mock', '<div class = "demo-container progression mock fixed red" data-progression-mock = "5"></div>');
+          break;
+        case "staggered-mock":
+          setDemo('staggered-mock', '<div class = "demo-container progression fixed mock staggered green" data-progression-mock = "5"></div>');
+          break;
+        case "timer":
+          setDemo('timer', '<div class = "demo-container progression fixed timer purple" data-progression-timer = "10"></div>');
+          break;
+      }
+    });

@@ -24,7 +24,7 @@ var gulp = require('gulp'),
       styles: [
         'src/vendor/normalize.css/normalize.css',
         'src/vendor/bootstrap/dist/css/bootstrap.css',
-        'src/vendor/csspinner/build/csspinner.min.css'
+        'src/vendor/progression/dist/progression.min.css'
       ]
     }
   },
