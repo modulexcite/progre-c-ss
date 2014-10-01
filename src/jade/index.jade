@@ -5,33 +5,33 @@ block content
       .col-md-8.col-md-offset-2
         ul.steps
           li.
-            include the <a href="https://github.com/jh3y/progression">stylesheet</a>
+            include the <a href="https://github.com/jh3y/progrecss">stylesheet</a>
           li.
-            add the class <code>progression</code> to your element (any existing element)
+            add the class <code>progrecss</code> to your element (any existing element)
           li.
-            Add a data attribute <code>data-progression</code> defining the completion percentage (1 to 100) and any optional data attributes and classes for your desired behaviour/position/appearance*
+            Add a data attribute <code>data-progrecss</code> defining the completion percentage (1 to 100) and any optional data attributes and classes for your desired behaviour/position/appearance*
           li.
-            update progression value if necessary using scripts!
+            update progrecss value if necessary using scripts!
         .code-snippet.hide.show
             pre
               code.
-                &lt;div  class=&quot;progression&quot; data-progression=&quot;77&quot;&gt;your content!&lt;/div&gt;
+                &lt;div  class=&quot;progrecss&quot; data-progrecss=&quot;77&quot;&gt;your content!&lt;/div&gt;
         .code-snippet.hide(name = "basic")
             pre
               code.
-                &lt;div class=&quot;progression fixed blue&quot; data-progression=&quot;75&quot;&gt;fixed blue progre(c)ss&lt;/div&gt;
+                &lt;div class=&quot;progrecss fixed blue&quot; data-progrecss=&quot;75&quot;&gt;fixed blue progre(c)ss&lt;/div&gt;
         .code-snippet.hide(name = "mock")
             pre
               code.
-                &lt;div class=&quot;progression mock fixed red&quot; data-progression-mock=&quot;5&quot;&gt;fixed red mocked progre(c)ss&lt;/div&gt;
+                &lt;div class=&quot;progrecss mock fixed red&quot; data-progrecss-mock=&quot;5&quot;&gt;fixed red mocked progre(c)ss&lt;/div&gt;
         .code-snippet.hide(name = "staggered-mock")
             pre
               code.
-                &lt;div class=&quot;progression mock fixed staggered green&quot; data-progression-mock=&quot;5&quot;&gt;fixed staggered mock progre(c)ss&lt;/div&gt;
+                &lt;div class=&quot;progrecss mock fixed staggered green&quot; data-progrecss-mock=&quot;5&quot;&gt;fixed staggered mock progre(c)ss&lt;/div&gt;
         .code-snippet.hide(name = "timer")
             pre
               code.
-                &lt;div class=&quot;progression timer fixed purple&quot; data-progression-timer=&quot;10&quot;&gt;timer progre(c)ss&lt;/div&gt;
+                &lt;div class=&quot;progrecss timer fixed purple&quot; data-progrecss-timer=&quot;10&quot;&gt;timer progre(c)ss&lt;/div&gt;
         .options
           button.btn.btn-info.action(name = "basic").
             basic
@@ -52,17 +52,17 @@ block content
       var action = $(this).attr('name');
       switch(action) {
         case "basic":
-          setDemo('basic', '<div class = "demo-container progression fixed blue" data-progression = "0"></div>')
-          setTimeout(function () {$('.demo-container').attr('data-progression', '75');}, 1000);
+          setDemo('basic', '<div class = "demo-container progrecss fixed blue" data-progrecss = "0"></div>')
+          setTimeout(function () {$('.demo-container').attr('data-progrecss', '75');}, 1000);
           break;
         case "mock":
-          setDemo('mock', '<div class = "demo-container progression mock fixed red" data-progression-mock = "5"></div>');
+          setDemo('mock', '<div class = "demo-container progrecss mock fixed red" data-progrecss-mock = "5"></div>');
           break;
         case "staggered-mock":
-          setDemo('staggered-mock', '<div class = "demo-container progression fixed mock staggered green" data-progression-mock = "5"></div>');
+          setDemo('staggered-mock', '<div class = "demo-container progrecss fixed mock staggered green" data-progrecss-mock = "5"></div>');
           break;
         case "timer":
-          setDemo('timer', '<div class = "demo-container progression fixed timer purple" data-progression-timer = "10"></div>');
+          setDemo('timer', '<div class = "demo-container progrecss fixed timer purple" data-progrecss-timer = "10"></div>');
           break;
       }
     });
